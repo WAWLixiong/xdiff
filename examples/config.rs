@@ -1,0 +1,8 @@
+use anyhow::Result;
+use xdiff::DiffConfig;
+
+fn main() -> Result<()> {
+    let content: &str = include_str!("../fixtures/test.yml");
+    let config = DiffConfig::from_yml(content)?;
+    Ok(())
+}
